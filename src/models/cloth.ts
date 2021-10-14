@@ -32,7 +32,8 @@ Cloth.init({
   modelName : 'Cloth',
   tableName : 'clothes',
   charset : 'utf8',
-  collate : 'utf8_general_ci'
+  collate : 'utf8_general_ci',
+  underscored : true
 })
 
 export default Cloth;
