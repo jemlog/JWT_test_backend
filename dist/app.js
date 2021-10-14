@@ -14,7 +14,7 @@ const models_1 = require("./models");
 const helmet_1 = __importDefault(require("helmet"));
 const hpp_1 = __importDefault(require("hpp"));
 const app = express_1.default();
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3005);
 if (process.env.NODE_ENV === 'production') {
     app.use(morgan_1.default('combined'));
     app.use(helmet_1.default({ contentSecurityPolicy: false }));
@@ -30,7 +30,7 @@ app.use(cors_1.default({ origin: true }));
 app.use('/auth', auth_1.default);
 app.use('/', index_1.default);
 // db connect
-models_1.sequelize.sync({ force: true }).then(() => {
+models_1.sequelize.sync({ force: false }).then(() => {
     console.log('postgres connected!');
 }).catch(error => {
     console.error(error);

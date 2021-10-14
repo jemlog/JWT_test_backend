@@ -31,7 +31,7 @@ app.use('/', IndexRouter)
 
 
 // db connect
-sequelize.sync({force : true}).then(()=>{
+sequelize.sync({force : false}).then(()=>{
   console.log('postgres connected!')
 }).catch(error=> {
   console.error(error)
