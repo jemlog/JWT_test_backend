@@ -19,7 +19,7 @@ router.post('/login', (req, res, next) => {
             return res.send(`invalid password ${password}`);
         }
         // 로그인 성공 후 token 생성 
-        const token = jsonwebtoken_1.default.sign({ email: 'jemin' }, 'jemin', { issuer: 'jemin', expiresIn: '15s' });
+        const token = jsonwebtoken_1.default.sign({ email: 'jemin' }, 'jemin', { issuer: 'jemin', expiresIn: '1d' });
         return res.status(200).json({ message: 'login Success', token });
     }
     else {
