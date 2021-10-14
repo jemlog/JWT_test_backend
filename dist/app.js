@@ -32,7 +32,7 @@ app.use('/auth', auth_1.default);
 app.use('/', index_1.default);
 app.use('/cloth', cloth_1.default);
 // db connect
-models_1.sequelize.sync({ force: false }).then(() => {
+models_1.sequelize.sync({ force: true }).then(() => {
     console.log('postgres connected!');
 }).catch(error => {
     console.error(error);

@@ -5,8 +5,9 @@ export async function createCloth(req:express.Request,res: express.Response,next
 
   const {top_buttom, short_long, color} = req.body;
   try{
-      const cloth = await Cloth.create({top_buttom, short_long, color})
-      res.status(201).json({code : 201, message : "you success!"})
+      const cloth = await Cloth.create({top_buttom ,short_long, color})
+      console.log(top_buttom, short_long, color)
+      res.status(201).json({code : 201, message : cloth})
   }
   catch(error)
   {

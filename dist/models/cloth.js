@@ -23,7 +23,8 @@ Cloth.init({
     modelName: 'Cloth',
     tableName: 'clothes',
     charset: 'utf8',
-    collate: 'utf8_general_ci'
+    collate: 'utf8_general_ci',
+    underscored: true
 });
 exports.default = Cloth;
 //# sourceMappingURL=cloth.js.map
