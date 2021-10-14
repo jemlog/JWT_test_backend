@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import cors from 'cors'
 import AuthRouter from './router/auth'
 import IndexRouter from './router/index'
+import ClothRouter from './router/cloth'
 import { sequelize } from './models';
 import helmet from 'helmet'
 import hpp from 'hpp'
@@ -28,7 +29,7 @@ app.use(cors({origin : true}))
 // routing
 app.use('/auth', AuthRouter)
 app.use('/', IndexRouter)
-
+app.use('/cloth',ClothRouter)
 
 // db connect
 sequelize.sync({force : false}).then(()=>{
