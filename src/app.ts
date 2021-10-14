@@ -9,7 +9,7 @@ import { sequelize } from './models';
 import helmet from 'helmet'
 import hpp from 'hpp'
 const app = express()
-app.set('port',process.env.PORT || 3001)
+app.set('port',process.env.PORT || 3005)
 if(process.env.NODE_ENV === 'production')
 {
   app.use(morgan('combined'))
