@@ -23,11 +23,11 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const config = {
     "development": {
-        "username": "postgres",
-        "password": '4321',
-        "database": "se_project_schema",
+        "username": "root",
+        "password": process.env.DB_PASSWORD,
+        "database": "seproject",
         "host": "127.0.0.1",
-        "dialect": "postgres"
+        "dialect": "mysql"
     },
     "test": {
         "username": "postgres",
@@ -37,11 +37,11 @@ const config = {
         "dialect": "postgres"
     },
     "production": {
-        "username": "postgres",
+        "username": "mysql",
         "password": process.env.DB_PASSWORD,
-        "database": "se_project_schema",
+        "database": "seproject",
         "host": "127.0.0.1",
-        "dialect": "postgres"
+        "dialect": "mysql"
     }
 };
 exports.default = config;

@@ -17,11 +17,11 @@ interface IConfigGroup {
 
 const config: IConfigGroup = {
   "development": {
-    "username": "postgres",
-    "password": '4321',
-    "database": "se_project_schema",
+    "username": "root",
+    "password": process.env.DB_PASSWORD!,
+    "database": "seproject",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "mysql"
   },
   "test": {
     "username": "postgres",
