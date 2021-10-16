@@ -6,6 +6,7 @@ type Config = {
   password: string,
   database: string,
   host: string,
+ 
   [key: string]: string | boolean
 }
 
@@ -17,25 +18,28 @@ interface IConfigGroup {
 
 const config: IConfigGroup = {
   "development": {
-    "username": "admin",
+    "username": "jemin",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
-    "host": process.env.RDS_ENDPOINT!,
-    "dialect": "mysql"
+    "host": 'seproject2.coszpbcqim9m.ap-northeast-2.rds.amazonaws.com',
+    "dialect": "mysql",
+    
   },
   "test": {
     "username": "postgres",
     "password": process.env.DB_PASSWORD!,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    
   },
   "production": {
-    "username": "admin",
+    "username": "jemin",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
     "host": process.env.RDS_ENDPOINT!,
-    "dialect": "mysql"
+    "dialect": "mysql",
+   
   }
 }
 
