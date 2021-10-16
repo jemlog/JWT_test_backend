@@ -33,7 +33,7 @@ const config: IConfigGroup = {
   "production": {
     "username": "mysql",
     "password": process.env.DB_PASSWORD!,
-    "database": "se_project_schema",
+    "database": "seproject",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
