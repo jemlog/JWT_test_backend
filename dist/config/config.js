@@ -40,7 +40,7 @@ const config = {
         "username": "mysql",
         "password": process.env.DB_PASSWORD,
         "database": "seproject",
-        "host": "127.0.0.1",
+        "host": process.env.RDS_ENDPOINT,
         "dialect": "mysql"
     }
 };

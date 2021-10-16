@@ -17,10 +17,10 @@ interface IConfigGroup {
 
 const config: IConfigGroup = {
   "development": {
-    "username": "root",
+    "username": "admin",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
-    "host": "127.0.0.1",
+    "host": process.env.RDS_ENDPOINT!,
     "dialect": "mysql"
   },
   "test": {
@@ -31,10 +31,10 @@ const config: IConfigGroup = {
     "dialect": "postgres"
   },
   "production": {
-    "username": "mysql",
+    "username": "admin",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
-    "host": "127.0.0.1",
+    "host": process.env.RDS_ENDPOINT!,
     "dialect": "mysql"
   }
 }
