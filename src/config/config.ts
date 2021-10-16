@@ -21,7 +21,7 @@ const config: IConfigGroup = {
     "username": "jemin",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
-    "host": 'seproject2.coszpbcqim9m.ap-northeast-2.rds.amazonaws.com',
+    "host": process.env.RDS_ENDPOINT!,
     "dialect": "mysql",
     
   },
