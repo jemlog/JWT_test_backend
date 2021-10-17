@@ -5,7 +5,7 @@ const sequelize_2 = require("./sequelize");
 class Cloth extends sequelize_1.Model {
 }
 Cloth.init({
-    top_buttom: {
+    top_bottom: {
         type: sequelize_1.DataTypes.STRING(20),
         allowNull: true
     },
