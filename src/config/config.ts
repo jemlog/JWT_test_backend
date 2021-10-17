@@ -34,7 +34,7 @@ const config: IConfigGroup = {
     
   },
   "production": {
-    "username": "jemin",
+    "username": "admin",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
     "host": process.env.RDS_ENDPOINT!,
