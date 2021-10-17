@@ -18,10 +18,10 @@ interface IConfigGroup {
 
 const config: IConfigGroup = {
   "development": {
-    "username": "root",
+    "username": "sjmin",
     "password": process.env.DB_PASSWORD!,
-    "database": "seproject",
-    "host": '127.0.0.1',
+    "database": "rds_test_schema",
+    "host": process.env.RDS_ENDPOINT!,
     "dialect": "mysql",
     
   },
@@ -34,9 +34,9 @@ const config: IConfigGroup = {
     
   },
   "production": {
-    "username": "admin",
+    "username": "sjmin",
     "password": process.env.DB_PASSWORD!,
-    "database": "seproject",
+    "database": "rds_test_schema",
     "host": process.env.RDS_ENDPOINT!,
     "dialect": "mysql",
    
