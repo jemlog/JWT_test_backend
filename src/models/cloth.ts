@@ -3,7 +3,7 @@ import {sequelize} from './sequelize'
 
 class Cloth extends Model {
   public readonly id!: string;
-  public top_buttom!: string;    // 상의 하의 
+  public top_bottom!: string;    // 상의 하의 
   public short_long!: string;  // 긴팔/ 반팔 
   public color!: string;  // 색상
   
@@ -13,7 +13,7 @@ class Cloth extends Model {
 }
 
 Cloth.init({
-  top_buttom : {
+  top_bottom : {
     type: DataTypes.STRING(20),
     allowNull : true
   },
