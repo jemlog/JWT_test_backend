@@ -18,10 +18,10 @@ interface IConfigGroup {
 
 const config: IConfigGroup = {
   "development": {
-    "username": "jemin",
+    "username": "root",
     "password": process.env.DB_PASSWORD!,
     "database": "seproject",
-    "host": process.env.RDS_ENDPOINT!,
+    "host": '127.0.0.1',
     "dialect": "mysql",
     
   },

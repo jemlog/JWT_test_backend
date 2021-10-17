@@ -23,10 +23,10 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const config = {
     "development": {
-        "username": "jemin",
+        "username": "root",
         "password": process.env.DB_PASSWORD,
         "database": "seproject",
-        "host": 'seproject2.coszpbcqim9m.ap-northeast-2.rds.amazonaws.com',
+        "host": '127.0.0.1',
         "dialect": "mysql",
     },
     "test": {
