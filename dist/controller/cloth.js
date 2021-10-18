@@ -16,10 +16,10 @@ exports.getCloth = exports.createCloth = void 0;
 const cloth_1 = __importDefault(require("../models/cloth"));
 function createCloth(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
-        const { top_bottom, short_long, color } = req.body;
+        const { top_bottom, short_long, color, material } = req.body;
         try {
-            const cloth = yield cloth_1.default.create({ top_bottom, short_long, color });
-            console.log(top_bottom, short_long, color);
+            const cloth = yield cloth_1.default.create({ top_bottom, short_long, color, material });
+            console.log(top_bottom, short_long, color, material);
             res.status(201).json({ code: 201, message: cloth });
         }
         catch (error) {

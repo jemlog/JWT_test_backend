@@ -17,6 +17,10 @@ Cloth.init({
         type: sequelize_1.DataTypes.STRING(20),
         allowNull: true
     },
+    material: {
+        type: sequelize_1.DataTypes.STRING(20),
+        allowNull: true
+    }
 }, {
     sequelize: sequelize_2.sequelize,
     timestamps: true,

@@ -6,7 +6,7 @@ class Cloth extends Model {
   public top_bottom!: string;    // 상의 하의 
   public short_long!: string;  // 긴팔/ 반팔 
   public color!: string;  // 색상
-  
+  public material!: string;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -25,6 +25,10 @@ Cloth.init({
     type :  DataTypes.STRING(20),
     allowNull : true
   },
+  material : {
+    type : DataTypes.STRING(20),
+    allowNull : true
+  }
   
 },{
   sequelize,

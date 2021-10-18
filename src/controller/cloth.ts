@@ -3,10 +3,10 @@ import Cloth from '../models/cloth'
 
 export async function createCloth(req:express.Request,res: express.Response,next: express.NextFunction){
 
-  const {top_bottom, short_long, color} = req.body;
+  const {top_bottom, short_long, color, material} = req.body;
   try{
-      const cloth = await Cloth.create({top_bottom ,short_long, color})
-      console.log(top_bottom, short_long, color)
+      const cloth = await Cloth.create({top_bottom ,short_long, color, material})
+      console.log(top_bottom, short_long, color, material)
       res.status(201).json({code : 201, message : cloth})
   }
   catch(error)
